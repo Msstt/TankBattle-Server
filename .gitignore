@@ -1,0 +1,50 @@
+# Ignore build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Dd]ebugGame/
+[Dd]ebug/Native/
+[Dd]ebugFinal/
+[Dd]ebugFinal/Native/
+
+# Ignore the binaries and obj folder
+bin/
+obj/
+
+# User-specific files
+.idea/
+.vscode/
+.vs/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer Package files
+*.appx
+*.appxbundle
+
+# Windows Installer dependencies
+*.deps.json
+
+# Npm packages
+node_modules/
+
+# Windows Installer files (same as above)
+*.cab
+*.msi
+*.msp
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
