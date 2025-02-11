@@ -18,17 +18,19 @@ class MainClass {
     socket.Listen(0);
     Console.WriteLine("Socket listen success!");
     while (true) {
-      if (socket.Poll(0, SelectMode.SelectRead)) {
-        ReadListenSocket(socket);
-      }
+      List<Socket> list = [];
+      list.Add(socket);
       foreach (Socket client in clients.Keys) {
-        if (client.Poll(0, SelectMode.SelectRead)) {
-          if (!ReadClientSocket(client)) {
-            break;
-          }
+        list.Add(client);
+      }
+      Socket.Select(list, null, null, 1000);
+      foreach (Socket item in list) {
+        if (item == socket) {
+          ReadListenSocket(item);
+        } else {
+          ReadClientSocket(item);
         }
       }
-      Thread.Sleep(1);
     }
   }
 
