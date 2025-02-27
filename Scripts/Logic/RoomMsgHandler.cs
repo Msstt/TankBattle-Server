@@ -106,6 +106,10 @@ public partial class MsgHandler {
       Finish(1);
       return;
     }
+    if (!room.StartBattle()) {
+      Finish(1);
+      return;
+    }
     Finish(0);
   }
 }

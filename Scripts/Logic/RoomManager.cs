@@ -41,4 +41,10 @@ public class RoomManager {
     }
     return msg;
   }
+
+  public static void Update() {
+    foreach (Room room in rooms.Values) {
+      room.Update();
+    }
+  }
 }

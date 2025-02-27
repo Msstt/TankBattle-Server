@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 public class NetManager {
   public static long pingInterval = 30;
-  private static readonly List<string> systemMsg = ["MsgPing"];
+  private static readonly List<string> systemMsg = ["MsgPing", "MsgSyncTank"];
 
   private static Socket socket;
   public static readonly Dictionary<Socket, ClientState> clients = [];

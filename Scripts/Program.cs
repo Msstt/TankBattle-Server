@@ -3,12 +3,12 @@ using System.Text.Json;
 
 public class MainClass {
   private static void Main(string[] args) {
-    if (args.Length < 1) {
+    if (args.Length < 2) {
       return;
     }
-    if (!DataBaseManager.Connect("tank_battle", "127.0.0.1", 3306, "root", args[0])) {
+    if (!DataBaseManager.Connect("tank_battle", "127.0.0.1", 3306, "root", args[1])) {
       return;
     }
-    NetManager.StartLoop("127.0.0.1", 8888);
+    NetManager.StartLoop(args[0], 8888);
   }
 }
